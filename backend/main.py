@@ -42,14 +42,12 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:3000",
         "http://localhost:5173",
-        "https://*.vercel.app",
+        "https://task-flow-ai-gamma.vercel.app",
     ],
-    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 # ─── Include Routers ────────────────────────────────────────────
 
 app.include_router(auth_routes.router)
