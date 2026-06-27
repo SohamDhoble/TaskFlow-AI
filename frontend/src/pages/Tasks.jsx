@@ -96,7 +96,7 @@ const Tasks = () => {
       });
       setAiSuggestion(res.data);
     } catch {
-      toast.error('AI suggestion failed — check your API key');
+      toast.info('AI Suggestions work in the local Ollama demo only.')
     } finally {
       setAiLoading(false);
     }
@@ -271,9 +271,8 @@ const Tasks = () => {
                       <div
                         ref={provided.innerRef}
                         {...provided.droppableProps}
-                        className={`flex-1 p-3 space-y-3 overflow-y-auto transition-colors duration-200 ${
-                          snapshot.isDraggingOver ? 'bg-primary/5' : ''
-                        }`}
+                        className={`flex-1 p-3 space-y-3 overflow-y-auto transition-colors duration-200 ${snapshot.isDraggingOver ? 'bg-primary/5' : ''
+                          }`}
                       >
                         {colTasks.map((task, index) => (
                           <Draggable key={task.id} draggableId={String(task.id)} index={index}>
@@ -397,9 +396,8 @@ const Tasks = () => {
                           key={p}
                           type="button"
                           onClick={() => setForm({ ...form, priority: p })}
-                          className={`flex-1 py-2.5 rounded-xl text-sm font-semibold capitalize border-2 transition-all duration-200 ${
-                            active ? colors[p] : 'border-dark-border text-text-secondary hover:border-dark-hover'
-                          }`}
+                          className={`flex-1 py-2.5 rounded-xl text-sm font-semibold capitalize border-2 transition-all duration-200 ${active ? colors[p] : 'border-dark-border text-text-secondary hover:border-dark-hover'
+                            }`}
                         >
                           {p}
                         </button>
@@ -419,9 +417,8 @@ const Tasks = () => {
                           key={s.value}
                           type="button"
                           onClick={() => setForm({ ...form, status: s.value })}
-                          className={`flex-1 py-2.5 rounded-xl text-sm font-semibold border-2 transition-all duration-200 ${
-                            active ? s.color : 'border-dark-border text-text-secondary hover:border-dark-hover'
-                          }`}
+                          className={`flex-1 py-2.5 rounded-xl text-sm font-semibold border-2 transition-all duration-200 ${active ? s.color : 'border-dark-border text-text-secondary hover:border-dark-hover'
+                            }`}
                         >
                           {s.label}
                         </button>
@@ -484,11 +481,10 @@ const Tasks = () => {
                   <button
                     type="submit"
                     disabled={saving}
-                    className={`flex-1 py-3 rounded-xl text-white font-semibold text-sm flex items-center justify-center gap-2 hover:shadow-lg transition-all disabled:opacity-60 btn-press ${
-                      isEditing
-                        ? 'bg-gradient-to-r from-amber-500 to-orange-500 hover:shadow-amber-500/25'
-                        : 'bg-gradient-to-r from-primary to-secondary hover:shadow-primary/25'
-                    }`}
+                    className={`flex-1 py-3 rounded-xl text-white font-semibold text-sm flex items-center justify-center gap-2 hover:shadow-lg transition-all disabled:opacity-60 btn-press ${isEditing
+                      ? 'bg-gradient-to-r from-amber-500 to-orange-500 hover:shadow-amber-500/25'
+                      : 'bg-gradient-to-r from-primary to-secondary hover:shadow-primary/25'
+                      }`}
                   >
                     {saving ? <Loader2 className="w-5 h-5 animate-spin" /> : isEditing ? 'Save Changes' : 'Create Task'}
                   </button>
