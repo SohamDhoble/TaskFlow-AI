@@ -1,205 +1,393 @@
-# 🚀 TaskFlow — AI-Powered Task Management System
+# 🚀 TaskFlow AI — AI-Powered Task Management System
 
 <div align="center">
 
-![TaskFlow](https://img.shields.io/badge/TaskFlow-AI%20Powered-6366F1?style=for-the-badge&logo=lightning&logoColor=white)
-![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.111-009688?style=flat-square&logo=fastapi)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Supabase-336791?style=flat-square&logo=postgresql)
-![Tailwind](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=flat-square&logo=tailwind-css)
+![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge\&logo=react)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.111-009688?style=for-the-badge\&logo=fastapi)
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge\&logo=python)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Supabase-336791?style=for-the-badge\&logo=postgresql)
+![Railway](https://img.shields.io/badge/Backend-Railway-0B0D0E?style=for-the-badge\&logo=railway)
+![Vercel](https://img.shields.io/badge/Frontend-Vercel-000000?style=for-the-badge\&logo=vercel)
+![Ollama](https://img.shields.io/badge/AI-Ollama-111111?style=for-the-badge)
 
-**A modern, production-ready task management platform with AI-powered priority suggestions, ML completion predictions, and a beautiful dark-themed Kanban board.**
+# 📋 TaskFlow AI
 
-</div>
+### A Modern AI-Powered Task Management System
 
----
-
-## ✨ Features
-
-| Feature | Description |
-|---------|-------------|
-| 🔐 **JWT Auth** | Secure register/login with bcrypt password hashing |
-| 📁 **Projects** | Full CRUD with status tracking and progress bars |
-| ✅ **Kanban Board** | Drag-and-drop tasks across Todo → In Progress → Done |
-| 🤖 **AI Priority** | Gemini API suggests task priority with reasoning |
-| 📊 **ML Prediction** | Linear Regression predicts task completion time |
-| 📈 **Dashboard** | KPI cards, Recharts bar/pie charts, activity feed |
-| 🎨 **Dark UI** | Glassmorphism, gradients, micro-animations |
-| 📱 **Responsive** | Mobile-first with collapsible sidebar |
+Secure task management platform with **JWT Authentication**, **Project Management**, **Kanban Board**, and **AI-powered Task Priority Suggestions using Ollama**.
 
 ---
 
-## 🛠 Tech Stack
+# 🌐 Live Demo
 
-### Frontend
-- **React 18** + React Router DOM
-- **Tailwind CSS 3.4** — dark theme design system
-- **Recharts** — interactive charts
-- **@hello-pangea/dnd** — drag-and-drop
-- **Lucide React** — icons
-- **Axios** — HTTP client
+### 🔗 Frontend
 
-### Backend
-- **Python 3.11+** + FastAPI
-- **SQLAlchemy 2.0** — ORM
-- **PostgreSQL** (Supabase) / SQLite fallback
-- **JWT** (python-jose) + **bcrypt** (passlib)
-- **Gemini API** — AI task priority
-- **NumPy** — ML linear regression
+https://task-flow-ai-gamma.vercel.app
+
+### ⚙️ Backend API
+
+https://taskflow-ai-production-eae9.up.railway.app
+
+### 📚 Swagger Documentation
+
+https://taskflow-ai-production-eae9.up.railway.app/docs
 
 ---
 
-## 📂 Project Structure
+# 🏗 System Architecture
 
 ```
-taskflow/
-├── frontend/
-│   ├── public/index.html
-│   ├── src/
-│   │   ├── api.js                  # Axios instance + interceptors
-│   │   ├── App.jsx                 # Routes + auth guards
-│   │   ├── index.js                # Entry point
-│   │   ├── index.css               # Tailwind + custom CSS
-│   │   ├── context/
-│   │   │   ├── AuthContext.jsx     # Auth state management
-│   │   │   └── ToastContext.jsx    # Toast notifications
-│   │   ├── components/
-│   │   │   ├── Layout.jsx          # Sidebar + content wrapper
-│   │   │   ├── Navbar.jsx          # Sidebar navigation
-│   │   │   ├── Chart.jsx           # Recharts components
-│   │   │   ├── ProjectCard.jsx     # Project card component
-│   │   │   └── TaskCard.jsx        # Draggable task card
-│   │   └── pages/
-│   │       ├── Login.jsx           # Login page
-│   │       ├── Register.jsx        # Registration page
-│   │       ├── Dashboard.jsx       # KPI + charts + activity
-│   │       ├── Projects.jsx        # Project CRUD + grid
-│   │       └── Tasks.jsx           # Kanban board
-│   ├── package.json
-│   ├── tailwind.config.js
-│   └── .env
+                React Frontend
+                  (Vercel)
+                     │
+                     ▼
+            FastAPI Backend
+                (Railway)
+                     │
+         ┌───────────┴───────────┐
+         ▼                       ▼
+ PostgreSQL Database        Ollama AI
+    (Supabase)            (Local Demo)
+```
+
+---
+
+# ✨ Features
+
+## 🔐 Authentication
+
+* JWT Authentication
+* User Registration
+* User Login
+* Password Hashing (bcrypt)
+* Protected Routes
+* Secure API Access
+
+---
+
+## 📁 Project Management
+
+* Create Project
+* View Projects
+* Update Project
+* Delete Project
+* Project Status
+* Project Progress
+
+---
+
+## ✅ Task Management
+
+* Create Task
+* Update Task
+* Delete Task
+* Task Priority
+* Task Status
+* Task Description
+
+---
+
+## 🤖 AI Features
+
+* AI Priority Suggestion
+* Ollama Integration
+* Llama 3.2 Model
+* AI Reason Generation
+
+> **Note:** AI suggestions are available in the local demo where Ollama is running. The deployed production version focuses on core task management functionality.
+
+---
+
+## 📊 Dashboard
+
+* Total Projects
+* Total Tasks
+* Pending Tasks
+* Completed Tasks
+* Statistics
+
+---
+
+## 🎨 UI Features
+
+* Responsive Design
+* Modern Interface
+* Mobile Friendly
+* Toast Notifications
+* Loading States
+
+---
+
+# 🛠 Tech Stack
+
+## Frontend
+
+* React 18
+* React Router DOM
+* Axios
+* JavaScript (ES6)
+* HTML5
+* CSS3
+* React Hot Toast
+
+---
+
+## Backend
+
+* Python 3.12
+* FastAPI
+* Uvicorn
+* SQLAlchemy
+* Pydantic
+* Passlib
+* bcrypt
+* python-jose (JWT)
+* python-dotenv
+* python-multipart
+* HTTPX
+
+---
+
+## Database
+
+* PostgreSQL
+* Supabase
+
+---
+
+## AI
+
+* Ollama
+* Llama 3.2
+
+---
+
+## Deployment
+
+* Git
+* GitHub
+* Railway
+* Vercel
+
+---
+
+# 📂 Project Structure
+
+```
+TaskFlow-AI
 │
-├── backend/
-│   ├── main.py                     # FastAPI app + AI/ML endpoints
-│   ├── database.py                 # SQLAlchemy engine + session
-│   ├── models.py                   # User, Project, Task models
-│   ├── schemas.py                  # Pydantic request/response
-│   ├── auth.py                     # JWT + bcrypt utilities
-│   ├── routes/
-│   │   ├── auth.py                 # POST /auth/register, /auth/login
-│   │   ├── projects.py             # CRUD /projects
-│   │   └── tasks.py                # CRUD /tasks
-│   ├── ml/
-│   │   └── predictor.py            # Linear regression predictor
+├── backend
+│   ├── auth.py
+│   ├── database.py
+│   ├── main.py
+│   ├── models.py
+│   ├── schemas.py
 │   ├── requirements.txt
-│   └── .env
+│   ├── routes
+│   │     ├── auth.py
+│   │     ├── projects.py
+│   │     └── tasks.py
+│   └── ...
 │
-└── README.md
+├── frontend
+│   ├── public
+│   ├── src
+│   │     ├── components
+│   │     ├── pages
+│   │     ├── App.js
+│   │     └── ...
+│   └── package.json
+│
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-## 🚀 Quick Start
+# 🚀 Installation
 
-### Prerequisites
-- Node.js 18+
-- Python 3.11+
-- PostgreSQL (or use SQLite for local dev)
+## Clone Repository
 
-### 1. Clone & Setup Backend
+```bash
+git clone https://github.com/SohamDhoble/TaskFlow-AI.git
+
+cd TaskFlow-AI
+```
+
+---
+
+## Backend Setup
 
 ```bash
 cd backend
 
-# Create virtual environment
 python -m venv venv
-venv\Scripts\activate      # Windows
-# source venv/bin/activate  # macOS/Linux
 
-# Install dependencies
+venv\Scripts\activate
+
 pip install -r requirements.txt
 
-# Configure environment
-# Edit .env with your DATABASE_URL, SECRET_KEY, GEMINI_API_KEY
-
-# Run server
-uvicorn main:app --reload --port 8000
+uvicorn main:app --reload
 ```
 
-### 2. Setup Frontend
+---
+
+## Frontend Setup
 
 ```bash
 cd frontend
 
-# Install dependencies
 npm install
 
-# Run dev server
 npm start
 ```
 
-### 3. Open App
-Navigate to **http://localhost:3000** and register a new account!
+---
+
+# 🔑 Environment Variables
+
+## Backend (.env)
+
+```
+DATABASE_URL=your_database_url
+
+SECRET_KEY=your_secret_key
+
+ALGORITHM=HS256
+
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+```
 
 ---
 
-## 🔑 API Endpoints
+# 🤖 Ollama Setup
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `POST` | `/auth/register` | Register new user |
-| `POST` | `/auth/login` | Login, get JWT token |
-| `GET` | `/projects` | List user's projects |
-| `POST` | `/projects` | Create project |
-| `PUT` | `/projects/{id}` | Update project |
-| `DELETE` | `/projects/{id}` | Delete project + tasks |
-| `GET` | `/tasks/{project_id}` | List project tasks |
-| `GET` | `/tasks/all` | List all user tasks |
-| `POST` | `/tasks` | Create task |
-| `PUT` | `/tasks/{id}` | Update task (drag & drop) |
-| `DELETE` | `/tasks/{id}` | Delete task |
-| `POST` | `/ai/suggest-priority` | AI priority suggestion |
-| `POST` | `/ml/predict-time` | ML completion prediction |
+Install Ollama
 
----
+```
+https://ollama.com
+```
 
-## 🌐 Deployment
+Pull Llama 3.2
 
-### Frontend → Vercel
-1. Push to GitHub
-2. Import repo in [Vercel](https://vercel.com)
-3. Set root directory: `frontend`
-4. Add env var: `REACT_APP_API_URL` = your Render backend URL
+```bash
+ollama pull llama3.2
+```
 
-### Backend → Render
-1. Create new Web Service on [Render](https://render.com)
-2. Set root directory: `backend`
-3. Build command: `pip install -r requirements.txt`
-4. Start command: `uvicorn main:app --host 0.0.0.0 --port 10000`
-5. Add env vars: `DATABASE_URL`, `SECRET_KEY`, `GEMINI_API_KEY`
+Run
 
-### Database → Supabase
-1. Create project on [Supabase](https://supabase.com)
-2. Go to Settings → Database → Connection string (URI)
-3. Use that as `DATABASE_URL` in Render
+```bash
+ollama serve
+```
 
 ---
 
-## 🎨 Design System
+# 📡 API Endpoints
 
-| Token | Value | Usage |
-|-------|-------|-------|
-| Primary | `#6366F1` | Buttons, active states |
-| Secondary | `#8B5CF6` | AI features, accents |
-| Accent | `#06B6D4` | ML features, highlights |
-| Background | `#0F172A` | Page background |
-| Card | `#1E293B` | Card surfaces |
-| Border | `#334155` | Dividers, borders |
-| Text Primary | `#F1F5F9` | Headings, body |
-| Text Secondary | `#94A3B8` | Labels, captions |
+## Authentication
+
+```
+POST /auth/register
+
+POST /auth/login
+```
+
+## Projects
+
+```
+GET /projects
+
+POST /projects
+
+PUT /projects/{id}
+
+DELETE /projects/{id}
+```
+
+## Tasks
+
+```
+GET /tasks
+
+POST /tasks
+
+PUT /tasks/{id}
+
+DELETE /tasks/{id}
+```
+
+## AI
+
+```
+POST /ai/suggest-priority
+# 🔒 Security
+
+* JWT Authentication
+* Password Hashing
+* Protected Routes
+* CORS Configuration
+* Environment Variables
+* SQLAlchemy ORM
 
 ---
 
-## 📜 License
+# 🚀 Deployment
 
-MIT © TaskFlow
+## Frontend
+
+* Vercel
+
+## Backend
+
+* Railway
+
+## Database
+
+* Supabase
+
+---
+
+# 🔮 Future Improvements
+
+* Email Verification
+* Password Reset
+* Team Collaboration
+* File Attachments
+* Notifications
+* Calendar View
+* Dark / Light Theme
+* Docker Support
+* CI/CD Pipeline
+* Role Based Access
+* AI Chat Assistant
+* AI Task Summarizer
+
+---
+
+# 👨‍💻 Author
+
+**Soham Dhoble**
+
+GitHub:
+https://github.com/SohamDhoble
+
+Project:
+https://github.com/SohamDhoble/TaskFlow-AI
+
+---
+
+# ⭐ Support
+
+If you like this project,
+
+⭐ Star the repository
+
+🍴 Fork it
+
+🛠 Contribute
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
